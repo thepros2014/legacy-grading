@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Grading | AI Coin Grading & Certified Numismatic Registry</title>
+    <meta name="description" content="Next-generation coin grading powered by mobile camera AI vision and certified onsite encapsulation. Instant Sheldon 70-point grading, subgrade diagnostics, and public registry database.">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Legacy Grading - AI Coin Grading & Certified Registry">
+    <meta property="og:description" content="Instant mobile camera AI quick-grading and verified numismatic database.">
+    <meta property="og:image" content="./assets/images/morgan_dollar_slab.jpg">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- SITE HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand-logo" aria-label="Legacy Grading Home">
+                <svg class="logo-icon-svg" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#goldGrad)" stroke-width="2.5"/>
+                    <circle cx="20" cy="20" r="14" stroke="rgba(230, 180, 76, 0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+                    <path d="M14 13V27H26M14 20H23" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBE39D"/>
+                            <stop offset="0.5" stop-color="#E6B44C"/>
+                            <stop offset="1" stop-color="#B88628"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="brand-text-wrap">
+                    <span class="brand-name">LEGACY GRADING</span>
+                    <span class="brand-sub">PRECISION NUMISMATIC AI</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="mainNavLinks">
+                <li><a href="#scannerSection" class="nav-link">QuickGrade AI</a></li>
+                <li><a href="#registrySection" class="nav-link">Public Registry</a></li>
+                <li><a href="#submissionSection" class="nav-link">Onsite vs Mobile</a></li>
+                <li><a href="#sheldonSection" class="nav-link">Grading Scale</a></li>
+            </ul>
+
+            <!-- Header Actions -->
+            <div class="nav-actions">
+                <!-- Cert Quick Lookup -->
+                <div class="header-cert-box">
+                    <input 
+                        type="text" 
+                        id="headerCertInput" 
+                        class="header-cert-input" 
+                        placeholder="Verify Cert #"
+                        aria-label="Verify Certificate Number"
+                    />
+                    <button id="headerCertBtn" class="btn-cert-search">Verify</button>
+                </div>
+
+                <!-- Web Audio SFX Toggle -->
+                <button id="toggleAudioBtn" class="btn-audio-toggle" title="Toggle Sound Effects">
+                    <span class="icon">🔊</span>
+                    <span class="btn-text">SFX Active</span>
+                </button>
+
+                <!-- Mobile QuickGrade Action -->
+                <a href="#scannerSection" class="btn-nav-scan">
+                    <span>⚡ QuickGrade</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text-col">
+                    <div class="hero-pill-badge">
+                        <span class="pulse-dot"></span>
+                        <span>LCG Neural Engine v4.2 Online</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Instant AI Coin Grading. <br>
+                        <span class="text-gradient-gold">Uncompromising Legacy.</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Experience the world's premier numismatic grading ecosystem. Get instantaneous 
+                        Sheldon 70-point evaluations from your mobile camera feed, or submit for physical 
+                        sonic-welded vault slabs—all indexed in a transparent public registry.
+                    </p>
+
+                    <div class="hero-actions-row">
+                        <a href="#scannerSection" class="btn-hero-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                            <span>Live Camera QuickGrade</span>
+                        </a>
+                        <a href="#registrySection" class="btn-hero-secondary">
+                            <span>Explore Database Registry</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Bar -->
+                    <div class="hero-trust-bar">
+                        <div class="trust-item">
+                            <div class="trust-item-val">99.4%</div>
+                            <div class="trust-item-label">Optical Accuracy</div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-item-val">&lt; 3 Sec</div>
+                            <div class="trust-item-label">Mobile AI Speed</div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-item-val">$48M+</div>
+                            <div class="trust-item-label">Registry Valuations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase -->
+                <div class="hero-visual-col">
+                    <div class="hero-showcase-card">
+                        <div class="showcase-header">
+                            <span class="showcase-tag">ONSITE VAULT MASTER SLAB</span>
+                            <span class="showcase-cert">CERT #08174563</span>
+                        </div>
+                        <div class="showcase-img-container">
+                            <img src="./assets/images/morgan_dollar_slab.jpg" alt="1881-S Morgan Dollar MS66+ Slab" id="heroShowcaseImg">
+                            <div class="showcase-floating-badge">
+                                <div>
+                                    <div class="badge-grade-title">MINT STATE 66+</div>
+                                    <div class="badge-grade-sub">1881-S Morgan Silver Dollar</div>
+                                </div>
+                                <span class="badge-pill-status">Tamper-Proof NFC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI CAMERA QUICKGRADE SECTION -->
+        <section class="scanner-section" id="scannerSection">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge">Live Optical Telemetry</span>
+                    <h2 class="section-title">Mobile AI QuickGrade</h2>
+                    <p class="section-subtitle">
+                        Position your coin within the holographic target ring. Our neural computer vision 
+                        analyzes surface luster, strike depth, high-point wear, and contact bagmarks in real-time.
+                    </p>
+                </div>
+
+                <div class="scanner-cockpit-grid">
+                    <!-- Scanner Viewport Card -->
+                    <div class="scanner-viewport-card">
+                        <!-- Top Viewport Bar -->
+                        <div class="scanner-controls-top">
+                            <div class="mode-tabs-group" role="tablist">
+                                <button class="mode-tab-btn active" id="tabLiveCam" role="tab">Live Camera Feed</button>
+                                <button class="mode-tab-btn" id="tabPreset" role="tab">Test Specimen</button>
+                                <button class="mode-tab-btn" id="tabUpload" role="tab">Upload Photo</button>
+                            </div>
+
+                            <div class="camera-status-pill" id="cameraStatusBadge">
+                                <span class="live-dot"></span> LIVE OPTICAL FEED
+                            </div>
+                        </div>
+
+                        <!-- Live Camera / Specimen Viewport Container -->
+                        <div class="camera-display-box" id="scannerContainer">
+                            <!-- Real Mobile/Webcam Video -->
+                            <video id="cameraVideo" playsinline autoplay muted></video>
+
+                            <!-- Preset / Uploaded Specimen Viewer -->
+                            <div id="presetCoinViewer" class="hidden">
+                                <img src="./assets/images/raw_morgan_obverse.jpg" alt="Coin Specimen" id="presetCoinImage">
+                            </div>
+
+                            <!-- Holographic Canvas HUD Overlay -->
+                            <canvas id="hudCanvas"></canvas>
+
+                            <!-- In-viewport Camera Flip Toggle -->
+                            <button class="btn-cam-switch" id="toggleCamBtn" title="Switch between Rear and Front camera">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 16.5l3.5-3.5L20 9.5M4 7.5L0.5 11 4 14.5"/>
+                                    <path d="M23 13H10a6 6 0 0 0-6 6v1M1 11h13a6 6 0 0 0 6-6V4"/>
+                                </svg>
+                                <span>Switch Lens</span>
+                            </button>
+
+                            <!-- Corner Live Telemetry Float -->
+                            <div class="hud-corner-telemetry">
+                                <div class="telemetry-stat">
+                                    <span class="tele-label">LUSTER</span>
+                                    <span class="tele-val" id="telemetryLuster">96%</span>
+                                </div>
+                                <div class="telemetry-stat">
+                                    <span class="tele-label">ALIGNMENT</span>
+                                    <span class="tele-val" id="telemetryEdge">98.4%</span>
+                                </div>
+                                <div class="telemetry-stat">
+                                    <span class="tele-label">STRIKE</span>
+                                    <span class="tele-val" id="telemetryStrike">94%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preset Specimen Selector Bar (Visible in 'Test Specimen' Mode) -->
+                        <div class="preset-selector-row hidden" id="presetSelectorContainer">
+                            <div class="preset-title">Select Calibrated Test Specimen:</div>
+                            <div class="preset-chips-list">
+                                <button class="specimen-chip active" data-index="0">1881-S Morgan Dollar</button>
+                                <button class="specimen-chip" data-index="1">1907 $20 Double Eagle</button>
+                                <button class="specimen-chip" data-index="2">1921 Peace Dollar</button>
+                                <button class="specimen-chip" data-index="3">1909-S VDB Lincoln Cent</button>
+                            </div>
+                        </div>
+
+                        <!-- Upload Photo Container (Visible in 'Upload Photo' Mode) -->
+                        <div class="upload-container-box hidden" id="uploadContainer">
+                            <label for="coinFileInput" class="upload-label-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                                </svg>
+                                <span>Choose High-Res Coin Image</span>
+                            </label>
+                            <input type="file" id="coinFileInput" accept="image/*" class="hidden">
+                            <div class="upload-hint" id="uploadFileName">Supports JPEG, PNG, WEBP from camera roll or file manager</div>
+                        </div>
+
+                        <!-- Primary Trigger Button -->
+                        <div class="scanner-viewport-footer">
+                            <button class="btn-trigger-ai-scan" id="triggerScanBtn">
+                                <svg class="scan-shutter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/>
+                                </svg>
+                                <span>QuickGrade with AI</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Telemetry / AI Architecture Breakdown -->
+                    <div class="scanner-telemetry-panel">
+                        <h3 class="tele-panel-title">Computer Vision Pipeline</h3>
+                        <p class="tele-panel-desc">
+                            Our real-time multi-angle photogrammetry engine executes a 4-tier numismatic audit in under 3 seconds:
+                        </p>
+
+                        <div class="pipeline-step-item">
+                            <div class="step-num">01</div>
+                            <div class="step-content">
+                                <h4>Planchet &amp; Edge Alignment</h4>
+                                <p>Normalizes perspective distortions and detects full rim continuity and denticles.</p>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step-item">
+                            <div class="step-num">02</div>
+                            <div class="step-content">
+                                <h4>Cartwheel Luster Luminescence</h4>
+                                <p>Analyzes radial light diffusion to differentiate genuine mint bloom from artificial buffing.</p>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step-item">
+                            <div class="step-num">03</div>
+                            <div class="step-content">
+                                <h4>High-Point Friction Index</h4>
+                                <p>Scans focal wear landmarks (hair curls, ear lobes, breast feathers) against pristine die strikes.</p>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-step-item">
+                            <div class="step-num">04</div>
+                            <div class="step-content">
+                                <h4>Bagmark &amp; Sheldon Synthesis</h4>
+                                <p>Assigns certified Sheldon 1-70 grade, generates subgrades, and computes market valuation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLIC DATABASE & REGISTRY SECTION -->
+        <section class="registry-section" id="registrySection">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge">Verified Population Catalog</span>
+                    <h2 class="section-title">The Legacy Registry</h2>
+                    <p class="section-subtitle">
+                        Every coin certified by Legacy Grading—whether evaluated onsite in our vault lab 
+                        or quick-graded via mobile phone AI—is permanently recorded with tamper-proof pedigree hashes.
+                    </p>
+                </div>
+
+                <!-- Live Registry Stats Bar -->
+                <div class="registry-stats-bar" id="registryStatsBar">
+                    <!-- Dynamic rendering from js/database.js -->
+                </div>
+
+                <!-- Filter & Search Cockpit -->
+                <div class="registry-filters-wrap">
+                    <div class="filter-row-top">
+                        <!-- Source Filter Buttons -->
+                        <div class="filter-source-toggles">
+                            <button class="filter-source-btn active" data-source="all">All Registry Coins</button>
+                            <button class="filter-source-btn" data-source="onsite">🏛️ Onsite Slabs</button>
+                            <button class="filter-source-btn" data-source="mobile_ai">📱 AI QuickGrades</button>
+                        </div>
+
+                        <!-- Live Search Input -->
+                        <div class="search-input-wrap">
+                            <span class="search-icon-inside">🔍</span>
+                            <input 
+                                type="text" 
+                                id="registrySearchInput" 
+                                class="registry-search-input" 
+                                placeholder="Search by Cert #, Coin Name, Year, or Grade..."
+                                aria-label="Search coins in registry"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="filter-row-bottom">
+                        <!-- Category Filter -->
+                        <select id="filterCategorySelect" class="filter-select" aria-label="Filter by coin category">
+                            <option value="all">All Denominations &amp; Metals</option>
+                            <option value="dollar">Silver Dollars (Morgan &amp; Peace)</option>
+                            <option value="gold">Gold Coins ($20 Double Eagle)</option>
+                            <option value="half">Half Dollars</option>
+                            <option value="cent">Cents &amp; Pennies</option>
+                        </select>
+
+                        <!-- Grade Tier Filter -->
+                        <select id="filterGradeTierSelect" class="filter-select" aria-label="Filter by grade tier">
+                            <option value="all">All Grade Scales</option>
+                            <option value="gem">Gem Mint State (MS 65 - 70)</option>
+                            <option value="mint">Mint State (MS 60 - 64)</option>
+                            <option value="au">About Uncirculated (AU 50 - 58)</option>
+                            <option value="circ">Circulated (&lt; 50)</option>
+                        </select>
+
+                        <!-- Sort Options -->
+                        <select id="sortRegistrySelect" class="filter-select" aria-label="Sort coins">
+                            <option value="newest">Sort by: Newest Certified</option>
+                            <option value="grade_desc">Grade: Highest to Lowest</option>
+                            <option value="grade_asc">Grade: Lowest to Highest</option>
+                            <option value="value_desc">Market Value: High to Low</option>
+                            <option value="year_asc">Year: Oldest to Newest</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Coin Grid -->
+                <div class="registry-grid" id="registryGrid">
+                    <!-- Populated dynamically by database.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ONSITE VS QUICKGRADE COMPARISON & SUBMISSION PORTAL -->
+        <section class="submission-section" id="submissionSection">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge">Grading Tier Comparison</span>
+                    <h2 class="section-title">Two Paths to Provenance</h2>
+                    <p class="section-subtitle">
+                        Choose between instant zero-friction mobile artificial intelligence or museum-grade 
+                        inert encapsulation backed by physical optical holograms and sonic welds.
+                    </p>
+                </div>
+
+                <!-- Comparison Cards -->
+                <div class="service-comparison-grid">
+                    <!-- AI QuickGrade Card -->
+                    <div class="comparison-card highlight-cyan">
+                        <div class="comp-header">
+                            <span class="comp-tag badge-quickgrade">📱 Mobile QuickGrade</span>
+                            <h3>Instant AI Assessment</h3>
+                            <div class="comp-price-row">
+                                <span class="price-num">$0</span>
+                                <span class="price-sub">/ Free QuickScan</span>
+                            </div>
+                        </div>
+
+                        <ul class="feature-list">
+                            <li><span class="check-green">✓</span> <strong>Instant Turnaround:</strong> 3-second live evaluation</li>
+                            <li><span class="check-green">✓</span> <strong>Neural Precision:</strong> 98.4% optical alignment score</li>
+                            <li><span class="check-green">✓</span> <strong>Sheldon 70-Point Grade:</strong> Full subgrade breakdown</li>
+                            <li><span class="check-green">✓</span> <strong>Public Registry:</strong> Instant permanent digital ledger entry</li>
+                            <li><span class="check-green">✓</span> <strong>Zero Risk:</strong> Grade from home without shipping coins</li>
+                        </ul>
+
+                        <a href="#scannerSection" class="btn btn-hero-secondary" style="width: 100%; justify-content: center;">
+                            Launch Mobile Camera
+                        </a>
+                    </div>
+
+                    <!-- Onsite Vault Certified Slab -->
+                    <div class="comparison-card highlight-gold">
+                        <div class="comp-header">
+                            <span class="comp-tag badge-onsite">🏛️ Onsite Vault Lab</span>
+                            <h3>Physical Master Slab</h3>
+                            <div class="comp-price-row">
+                                <span class="price-num">$35</span>
+                                <span class="price-sub">/ coin standard</span>
+                            </div>
+                        </div>
+
+                        <ul class="feature-list">
+                            <li><span class="check-green">✓</span> <strong>Sonic-Welded Holder:</strong> Scratch-resistant inert acrylic slab</li>
+                            <li><span class="check-green">✓</span> <strong>Multi-Tier Scrutiny:</strong> Senior numismatists + AI cross-check</li>
+                            <li><span class="check-green">✓</span> <strong>Embedded NFC Chip:</strong> Tap-to-verify tamper-proof hardware</li>
+                            <li><span class="check-green">✓</span> <strong>Optical Micro-Hologram:</strong> Counterfeit-proof security foil</li>
+                            <li><span class="check-green">✓</span> <strong>Insured Pedigree:</strong> Recognized by premier world auction houses</li>
+                        </ul>
+
+                        <button class="btn btn-hero-primary" style="width: 100%; justify-content: center;" onclick="document.getElementById('calcCoinCount').focus()">
+                            Calculate Submission
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Fee & Turnaround Calculator -->
+                <div class="calc-wrapper-card">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem;">
+                        🪙 Interactive Submission Estimator
+                    </h3>
+
+                    <div class="calc-grid">
+                        <div class="calc-inputs-col">
+                            <div class="calc-form-group">
+                                <label for="calcCoinCount" class="calc-label">Number of Coins to Grade:</label>
+                                <input type="number" id="calcCoinCount" class="calc-input-number" min="1" max="500" value="5">
+                            </div>
+
+                            <div class="calc-form-group">
+                                <label class="calc-label">Select Service Level:</label>
+                                <div class="tier-options-group">
+                                    <label class="tier-label-box">
+                                        <input type="radio" name="serviceTier" value="quick">
+                                        <span class="tier-box-name">Mobile AI</span>
+                                        <span class="tier-box-fee">Free / $0</span>
+                                    </label>
+                                    <label class="tier-label-box">
+                                        <input type="radio" name="serviceTier" value="onsite_standard" checked>
+                                        <span class="tier-box-name">Standard Slab</span>
+                                        <span class="tier-box-fee">$35 / coin</span>
+                                    </label>
+                                    <label class="tier-label-box">
+                                        <input type="radio" name="serviceTier" value="onsite_express">
+                                        <span class="tier-box-name">Express 48hr</span>
+                                        <span class="tier-box-fee">$65 / coin</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="calc-form-group">
+                                <label class="calc-label">Optional Enhancements:</label>
+                                <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; cursor: pointer;">
+                                        <input type="checkbox" id="addonTrueview" checked>
+                                        <span>TrueView™ Studio Macro Photography (+$5 / coin)</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; cursor: pointer;">
+                                        <input type="checkbox" id="addonHolo">
+                                        <span>Custom Holographic Pedigree Inscription (+$4 / coin)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Summary Column -->
+                        <div class="calc-summary-panel">
+                            <div>
+                                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Estimated Order Summary</h4>
+                                <div class="summary-row">
+                                    <span style="color: var(--text-secondary);">Turnaround Time:</span>
+                                    <strong id="calcTurnaround">5-7 Business Days</strong>
+                                </div>
+                                <div class="summary-row">
+                                    <span style="color: var(--text-secondary);">Insurance Coverage:</span>
+                                    <strong>Full Transit &amp; Vault Insured</strong>
+                                </div>
+                                <div class="summary-row">
+                                    <span style="color: var(--text-secondary);">Registry Status:</span>
+                                    <strong>Automatic LCG Population Entry</strong>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="summary-row summary-total">
+                                    <span style="font-size: 1.1rem; font-weight: 700;">Total Investment:</span>
+                                    <span class="total-amount" id="calcTotalCost">$200</span>
+                                </div>
+                                <button class="btn btn-hero-primary" id="submitOrderBtn" style="width: 100%; justify-content: center; margin-top: 1rem;">
+                                    Generate Submission Manifest
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHELDON 70-POINT GRADING SCALE EXPLORER -->
+        <section class="sheldon-section" id="sheldonSection">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge">Numismatic Science</span>
+                    <h2 class="section-title">The Sheldon 70-Point Standard</h2>
+                    <p class="section-subtitle">
+                        Established by Dr. William H. Sheldon in 1949 and modernized with computer vision. 
+                        Click each grade tier to inspect the algorithmic thresholds:
+                    </p>
+                </div>
+
+                <!-- Grade Selection Pills -->
+                <div class="sheldon-scale-pills">
+                    <button class="sheldon-scale-pill active" data-grade="ms70">MS-70 / PR-70 Perfect</button>
+                    <button class="sheldon-scale-pill" data-grade="ms65">MS-65 Gem Uncirculated</button>
+                    <button class="sheldon-scale-pill" data-grade="au58">AU-58 Choice About Unc</button>
+                    <button class="sheldon-scale-pill" data-grade="xf45">XF-45 Choice Extremely Fine</button>
+                    <button class="sheldon-scale-pill" data-grade="vf20">VF-20 Very Fine</button>
+                </div>
+
+                <!-- Grade Details Card -->
+                <div class="sheldon-detail-card">
+                    <h3 id="sheldonDetailTitle">MS-70 / PR-70 • Perfect Mint State</h3>
+                    <p id="sheldonDetailDesc" style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 1.05rem;">
+                        Flawless coin under 5x magnification with no trace of contact marks, hairlines, or microscopic planchet flaws. Full vibrant mint bloom or mirror cameo fields.
+                    </p>
+                    <div style="background: rgba(0,0,0,0.4); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                        <strong style="color: var(--gold-light); font-size: 0.85rem; text-transform: uppercase;">Algorithmic Criteria:</strong>
+                        <p id="sheldonDetailCriteria" style="font-size: 0.92rem; color: var(--text-primary); margin-top: 0.3rem;">
+                            Zero friction, razor-sharp die strike, pristine virgin luster, immaculate eye appeal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="brand-name">LEGACY GRADING</span>
+                    </div>
+                    <p>
+                        Setting the global gold standard for numismatic authentication, mobile AI grading, 
+                        and tamper-proof public registry verification.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Grading Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="#scannerSection">Mobile AI QuickGrade</a></li>
+                        <li><a href="#submissionSection">Onsite Vault Encapsulation</a></li>
+                        <li><a href="#submissionSection">Bulk Dealer Submissions</a></li>
+                        <li><a href="#sheldonSection">Sheldon Scale Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Registry &amp; Population</h4>
+                    <ul class="footer-links">
+                        <li><a href="#registrySection">Public Coin Database</a></li>
+                        <li><a href="#registrySection">Population Reports</a></li>
+                        <li><a href="#headerCertInput">Verify Certificate</a></li>
+                        <li><a href="#">Market Price Index</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Security &amp; Standards</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Optical Hologram Auth</a></li>
+                        <li><a href="#">Tamper-Proof NFC Chips</a></li>
+                        <li><a href="#">Sonic Welded Polymers</a></li>
+                        <li><a href="#">API Developer Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Legacy Grading Corporation. All Rights Reserved.</div>
+                <div>Encrypted Numismatic Verification • LCG Protocol v4.2</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         MODALS & OVERLAYS
+         ========================================================================== -->
+
+    <!-- SCAN IN PROGRESS MODAL -->
+    <div class="modal-backdrop hidden" id="scanProgressModal" aria-hidden="true">
+        <div class="modal-content-box" style="max-width: 500px; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⚡</div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem;">
+                AI Neural Analysis in Progress
+            </h3>
+            <p id="scanProgressLabel" style="color: var(--text-secondary); font-size: 0.9rem;">
+                Calibrating Optical Plane &amp; Rim Denticles...
+            </p>
+
+            <div class="scan-progress-box">
+                <div class="scan-progress-fill" id="scanProgressFill"></div>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-light);" id="scanProgressPercent">
+                25%
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICKGRADE RESULT MODAL -->
+    <div class="modal-backdrop hidden" id="quickGradeResultModal" aria-hidden="true">
+        <div class="modal-content-box" style="max-width: 680px;">
+            <button class="modal-close-btn" id="closeResultBtn" aria-label="Close modal">&times;</button>
+            
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                <span style="font-size: 1.5rem;">🎉</span>
+                <div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--gold-light);">
+                        AI QuickGrade Completed
+                    </h3>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);" id="resCertNumber">
+                        LCG-AI-0000000
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <!-- Snapshot -->
+                <div style="background: #000; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 1/1; border: 1px solid var(--border-cyan);">
+                    <img src="./assets/images/raw_morgan_obverse.jpg" alt="Graded Specimen" id="resCoinImage" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <!-- Grade Highlights -->
+                <div>
+                    <h4 id="resCoinTitle" style="font-size: 1.2rem; margin-bottom: 0.4rem;">Coin Specimen</h4>
+                    <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;">
+                        <span id="resCoinGrade" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: var(--cyan-primary);">
+                            MS 65+
+                        </span>
+                        <span id="resCoinType" style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Gem Uncirculated
+                        </span>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                        <div>
+                            <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">CONFIDENCE</span>
+                            <span id="resConfidence" style="font-family: var(--font-mono); font-weight: 700; color: #10b981;">98.4%</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">EST. VALUE</span>
+                            <span id="resMarketValue" style="font-family: var(--font-mono); font-weight: 700; color: var(--gold-light);">$380</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subgrades Breakdown -->
+            <div class="result-subgrades-bars">
+                <div class="subgrade-bar-item">
+                    <div class="subgrade-bar-labels">
+                        <span>Strike Sharpness</span>
+                        <strong id="resStrikeVal">9.5 / 10</strong>
+                    </div>
+                    <div class="subgrade-track"><div class="subgrade-fill" id="resStrikeBar" style="width: 95%;"></div></div>
+                </div>
+
+                <div class="subgrade-bar-item">
+                    <div class="subgrade-bar-labels">
+                        <span>Mint Luster &amp; Bloom</span>
+                        <strong id="resLusterVal">9.6 / 10</strong>
+                    </div>
+                    <div class="subgrade-track"><div class="subgrade-fill" id="resLusterBar" style="width: 96%;"></div></div>
+                </div>
+
+                <div class="subgrade-bar-item">
+                    <div class="subgrade-bar-labels">
+                        <span>Surfaces &amp; Bagmarks</span>
+                        <strong id="resSurfacesVal">9.2 / 10</strong>
+                    </div>
+                    <div class="subgrade-track"><div class="subgrade-fill" id="resSurfacesBar" style="width: 92%;"></div></div>
+                </div>
+
+                <div class="subgrade-bar-item">
+                    <div class="subgrade-bar-labels">
+                        <span>Eye Appeal</span>
+                        <strong id="resEyeAppealVal">9.6 / 10</strong>
+                    </div>
+                    <div class="subgrade-track"><div class="subgrade-fill" id="resEyeAppealBar" style="width: 96%;"></div></div>
+                </div>
+            </div>
+
+            <!-- Cryptographic Verification Hash -->
+            <div style="margin-bottom: 1.5rem;">
+                <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Cryptographic Ledger Hash</span>
+                <div class="cert-hash-box" id="resCertHash">
+                    e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-hero-primary" id="publishToRegistryBtn" style="flex: 1;">
+                    ✓ Add to Public Registry Database
+                </button>
+                <button class="btn btn-hero-secondary" id="upgradeSlabBtn">
+                    Order Onsite Physical Slab ($35)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLAB INSPECTOR & OFFICIAL CERTIFICATE MODAL -->
+    <div class="modal-backdrop hidden" id="slabInspectorModal" aria-hidden="true">
+        <div class="modal-content-box">
+            <button class="modal-close-btn" id="closeInspectorBtn" aria-label="Close modal">&times;</button>
+
+            <div class="inspector-layout-grid">
+                <!-- Coin Image & Loupe Magnifier Column -->
+                <div class="inspector-coin-col">
+                    <div class="inspector-image-wrapper" id="inspectorImgContainer">
+                        <img src="./assets/images/morgan_dollar_slab.jpg" alt="Inspecting Coin" id="inspectorCoinImage">
+                        <!-- Optical Magnifier Loupe Lens -->
+                        <div class="optical-loupe" id="opticalLoupe"></div>
+                    </div>
+
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-hero-secondary" id="modalFlipSideBtn" style="flex: 1; padding: 0.6rem; font-size: 0.85rem;">
+                            🔄 View Reverse Side
+                        </button>
+                    </div>
+
+                    <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+                        💡 Hover / drag over the coin surface for 3.2x Optical Loupe magnification
+                    </div>
+                </div>
+
+                <!-- Coin Details Column -->
+                <div class="inspector-details-col">
+                    <div>
+                        <div id="modalSourceTag" style="margin-bottom: 0.5rem;">
+                            <!-- Injected source badge -->
+                        </div>
+                        <h2 id="modalCoinTitle" style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.4rem;">
+                            1881-S Morgan Silver Dollar
+                        </h2>
+                        <div style="display: flex; align-items: baseline; gap: 0.75rem;">
+                            <span id="modalCoinGrade" style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: 800; color: var(--gold-light);">
+                                MS 66+
+                            </span>
+                            <span id="modalGradeType" style="color: var(--text-secondary); font-size: 1rem;">
+                                Gem Uncirculated
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Meta Information Table -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; background: rgba(0,0,0,0.4); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); font-size: 0.85rem;">
+                        <div>
+                            <span style="color: var(--text-muted); display: block; font-size: 0.75rem;">CERTIFICATE NUMBER</span>
+                            <strong id="modalCertNumber" style="font-family: var(--font-mono); color: var(--gold-light);">LCG-08174563</strong>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-muted); display: block; font-size: 0.75rem;">ESTIMATED VALUE</span>
+                            <strong id="modalMarketValue" style="font-family: var(--font-mono); color: var(--cyan-primary);">$850</strong>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-muted); display: block; font-size: 0.75rem;">DENOMINATION</span>
+                            <span id="modalDenomination">$1 Silver Dollar</span>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-muted); display: block; font-size: 0.75rem;">COMPOSITION</span>
+                            <span id="modalComposition">90% Silver</span>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-muted); display: block; font-size: 0.75rem;">PEDIGREE / COLLECTION</span>
+                            <span id="modalPedigree">The Silver Peak Collection</span>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-muted); display: block; font-size: 0.75rem;">CERTIFIED DATE</span>
+                            <span id="modalCertifiedDate">2026-04-12</span>
+                        </div>
+                    </div>
+
+                    <!-- Population Census -->
+                    <div style="background: rgba(230, 180, 76, 0.08); border: 1px solid var(--border-gold); padding: 0.85rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--gold-light); text-transform: uppercase;">REGISTRY POPULATION</span>
+                            <div style="font-weight: 700; font-size: 0.95rem;" id="modalPopulation">48 Total in Population</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">RARITY CENSUS</span>
+                            <div style="font-family: var(--font-mono); font-weight: 700; color: var(--text-primary);" id="modalPopHigher">6 Graded Higher</div>
+                        </div>
+                    </div>
+
+                    <!-- Subgrades Diagnostic Bars -->
+                    <div class="result-subgrades-bars" style="margin: 0.5rem 0;">
+                        <div class="subgrade-bar-item">
+                            <div class="subgrade-bar-labels">
+                                <span>Strike Sharpness</span>
+                                <strong id="modalStrikeScore">9.7 / 10</strong>
+                            </div>
+                            <div class="subgrade-track"><div class="subgrade-fill" id="modalStrikeBar" style="width: 97%;"></div></div>
+                        </div>
+                        <div class="subgrade-bar-item">
+                            <div class="subgrade-bar-labels">
+                                <span>Luster Luminescence</span>
+                                <strong id="modalLusterScore">9.8 / 10</strong>
+                            </div>
+                            <div class="subgrade-track"><div class="subgrade-fill" id="modalLusterBar" style="width: 98%;"></div></div>
+                        </div>
+                        <div class="subgrade-bar-item">
+                            <div class="subgrade-bar-labels">
+                                <span>Surfaces &amp; Bagmarks</span>
+                                <strong id="modalSurfacesScore">9.5 / 10</strong>
+                            </div>
+                            <div class="subgrade-track"><div class="subgrade-fill" id="modalSurfacesBar" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="subgrade-bar-item">
+                            <div class="subgrade-bar-labels">
+                                <span>Eye Appeal</span>
+                                <strong id="modalEyeAppealScore">9.9 / 10</strong>
+                            </div>
+                            <div class="subgrade-track"><div class="subgrade-fill" id="modalEyeAppealBar" style="width: 99%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Numismatic Curator Notes -->
+                    <div>
+                        <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.3rem;">Curator Diagnostics</h4>
+                        <p id="modalDescription" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+                            An extraordinary gem specimen displaying intense satiny luster with dynamic cartwheel rotation.
+                        </p>
+                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem;">
+                            <strong>Strike Note:</strong> <span id="modalStrikeDetails">Razor-sharp ear lobe and breast feathers</span>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">
+                            <strong>Luster Profile:</strong> <span id="modalLusterType">Blazing Cartwheel Satin</span>
+                        </div>
+                    </div>
+
+                    <!-- Tamper-Proof Cryptographic Verification -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                            <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Cryptographic Verification Hash</span>
+                            <button class="btn btn-sm" id="modalCopyHashBtn" style="padding: 0.2rem 0.6rem; font-size: 0.72rem;">Copy Hash</button>
+                        </div>
+                        <div class="cert-hash-box" id="modalVerifyHash">
+                            7b4c91a03e68df45c91b827e48d3f112bc90fa960e31853bc9c8f0012e12e841
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">
+                            <span>Submitter: <strong id="modalSubmitter" style="color: var(--text-primary);">Legacy Prime Member #409</strong></span>
+                            <span>Security: <strong style="color: #10b981;">Hardware Verified</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Print / Export Pedigree -->
+                    <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+                        <button class="btn btn-hero-primary" id="modalPrintCertBtn" style="flex: 1; padding: 0.75rem; font-size: 0.9rem;">
+                            🖨️ Export Pedigree Certificate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/audio.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/scanner.js"></script>
+    <script src="./js/database.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
