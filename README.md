@@ -2,6 +2,9 @@
 
 > **The Next Generation of Numismatic Verification & Instant AI Assessment.**
 
+🌐 **Live Vercel Review Site**: [https://legacy-grading.vercel.app](https://legacy-grading.vercel.app)  
+📦 **GitHub Repository**: [https://github.com/thepros2014/legacy-grading](https://github.com/thepros2014/legacy-grading)
+
 Legacy Grading combines cutting-edge computer vision with museum-grade physical encapsulation. Graders and collectors can perform instantaneous Sheldon 70-point assessments directly from their mobile camera live feed, view tamper-proof digital certificates, and explore a public registry tracking both onsite vault slabs and mobile AI quick-grades.
 
 ---

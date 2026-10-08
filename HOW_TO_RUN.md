@@ -4,6 +4,15 @@ Welcome to **Legacy Grading**! This guide explains how to launch and run the web
 
 ---
 
+## 🌐 Instant Review (No Setup Required)
+
+Open the live cloud version directly on any computer, tablet, or smartphone:
+👉 **[https://legacy-grading.vercel.app](https://legacy-grading.vercel.app)**
+
+Because this link is secured with HTTPS, your smartphone's camera will work immediately with full hardware acceleration!
+
+---
+
 ## ⚡ Method 1: One-Click Launch (Easiest for Windows)
 
 1. Open your project folder: `legacy Grading`
